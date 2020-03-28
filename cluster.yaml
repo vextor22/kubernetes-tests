@@ -1,0 +1,14 @@
+all:
+  children:
+      localhost:
+          hosts:
+              127.0.0.1 ansible_connection=local
+      kubernetes:
+          hosts:
+              192.168.1.3[1:3]
+      kubernetes-masters:
+          hosts:
+              192.168.1.31
+      kubernetes-workers:
+          hosts:
+              192.168.1.3[2:3]
